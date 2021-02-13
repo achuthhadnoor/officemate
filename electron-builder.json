@@ -1,0 +1,47 @@
+{
+
+    "build": {
+        "asar": true,
+        "appId": "com.snipnote.app",
+        "compression": "normal",
+        "productName": "snipnote",
+    "files": [
+        "main",
+        "main/icons",
+      "renderer/out"
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "main/static/logo.ico"
+    },
+    "mac": {
+        "icon": "main/static/logo.icns",
+      "category": "public.app-category.developer-tools",
+      "target": "dmg"
+    },
+    "dmg": {
+      "icon": "main/static/logo.icns",
+      "contents": [
+        {
+            "x": 110,
+            "y": 150
+        },
+        {
+            "x": 240,
+            "y": 150,
+            "type": "link",
+            "path": "/Applications"
+        }
+    ]
+},
+    "linux": {
+        "icon": "main/static/logo.png",
+        "target": [
+        "snap",
+        "AppImage"
+    ],
+      "description": "Snip",
+      "category": "developer tools"
+    }
+  }
+}
