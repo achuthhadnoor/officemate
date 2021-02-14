@@ -34,8 +34,7 @@ export const ListOption = styled.div`
 
 export const MemberListItem = styled.li`
     display:flex;
-    align-items:'center';
-    padding:10px;
+    align-items:'center'; 
     ${props => props.waved && 'font-weight:800'};
     cursor:pointer;
     &:hover ${ListOptions}{

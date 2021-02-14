@@ -7,15 +7,15 @@ import { externalLink } from 'react-icons-kit/feather/externalLink'
 const Members = ({ MemberList }) => {
     return (
         <Styles.MembersWrapper>
-            <Styles.MembersTitle>Members</Styles.MembersTitle>
             <Styles.MemberSearch placeholder="Search" />
+            <Styles.MembersTitle>Members</Styles.MembersTitle>
             <Styles.MemberListWrapper>
                 {
                     MemberList.map(({ id, status, name, waved }, i) => (
                         <Styles.MemberListItem key={i} waved={waved}>
                             <Link href={`/chat/${id}`}>
                                 <Styles.ListLink>
-                                    <span> {status === 'available' ? <Styles.Status color="green" /> : status === 'away' ? <Styles.Status color="yellow" /> : status === 'busy' ? <Styles.Status color="red" /> : status}</span>
+                                    <span title={status}> {status === 'available' ? <Styles.Status color="green" /> : status === 'away' ? <Styles.Status color="yellow" /> : status === 'busy' ? <Styles.Status color="red" /> : status}</span>
                                     {waved && <span style={{ paddingLeft: 5 }}>👋</span>}
                                     <span style={{ paddingLeft: 5 }}> {name}</span>
                                 </Styles.ListLink>
