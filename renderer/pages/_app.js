@@ -23,6 +23,10 @@ class MyApp extends App {
                         
                         * {
                           box-sizing: border-box;
+                          padding:0;
+                          margin:0;
+                          color:inherit;
+                          outline:none;
                         }
                         
                         button{
